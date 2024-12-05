@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+    <div class="card">
+        <h2>Lista de Animais</h2>
+        {% for item in lista_de_animais %}
+            <div class="animal-info">
+                <p><span>ID:</span> {{item.id_animal}}</p>
+                <p><span>Nome:</span> {{item.nome_animal}}</p>
+                <p><span>Raça:</span> {{item.raca}}</p>
+                <p><span>Data de Nascimento:</span> {{item.anoNasci}}</p>
+                <p><span>ID do Dono:</span> {{item.idCliente}}</p>
+                <a href="{{ url_for('editar_animal', id_animal=item.id_animal) }}" class="btn-edit">Editar</a>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock conteudo %}

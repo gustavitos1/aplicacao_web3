@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+    <div class="card">
+        <h2>Lista de Consultas</h2>
+        {% for item in lista_de_consultas %}
+            <div class="consulta-info">
+                <p><span>ID da Consulta:</span> {{item.id_consulta}}</p>
+                <p><span>Data:</span> {{item.data}}</p>
+                <p><span>Hora:</span> {{item.hora}}</p>
+                <p><span>ID do Animal:</span> {{item.idAnimal}}</p>
+                <p><span>ID do Veterinário:</span> {{item.idVeterinario}}</p>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock conteudo %}

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+    <h1>Bem-vindo à Dogs & Dogs!</h1>
+    <p>Estamos felizes em tê-lo(a) aqui. Explore as funcionalidades da nossa aplicação para gerenciar clientes, animais, consultas, veterinários e muito mais!</p>
+
+    <section class="welcome-section">
+        <h2>O que você pode fazer aqui?</h2>
+        <ul>
+            <li>📋 <strong>Cadastro de Clientes e Animais</strong> - Adicione novos clientes e seus pets.</li>
+            <li>🗓️ <strong>Agendamento e Histórico de Consultas</strong> - Visualize todas as consultas realizadas.</li>
+            <li>👨‍⚕️ <strong>Gestão de Veterinários</strong> - Monitore o desempenho e horários dos veterinários.</li>
+            <li>📊 <strong>Relatórios Financeiros e Operacionais</strong> - Acompanhe o desempenho da clínica.</li>
+        </ul>
+    </section>
+
+    <section class="cta-section">
+        <p>Pronto para começar? Use o menu acima para navegar entre as seções!</p>
+        <br>
+        <a href="{{ url_for('cadastro_clientes') }}" class="btn">Começar Cadastro de Clientes</a>
+    </section>
+{% endblock conteudo %}

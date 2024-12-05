@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+    <h2>Cadastro de Veterinários</h2>
+    <form action="{{url_for('cadastro_veterinario')}}" method="POST">
+        <div>
+            <label for="form_crmv">CRMV</label>
+            <input type="text" id="form_crmv" name="form_crmv" placeholder="Insira o CRMV" required>
+        </div>
+
+        <div>
+            <label for="form_nomeVet">Nome do Veterinário</label>
+            <input type="text" id="form_nomeVet" name="form_nomeVet" placeholder="Insira o nome" required>
+        </div>
+
+        <div>
+            <label for="form_salario">Salário do Veterinário</label>
+            <input type="text" id="form_salario" name="form_salario" placeholder="Salário" required>
+        </div>
+
+        <button type="submit">Cadastrar Veterinário</button>
+    </form>
+{% endblock conteudo %}
+

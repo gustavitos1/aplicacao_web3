@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dogs & Dogs - Sistema Veterinário</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='design.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Dogs & Dogs</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('inicio') }}">Início</a></li>
+                <li><a href="{{ url_for('cadastro_clientes') }}">Cadastro de Clientes</a></li>
+                <li><a href="{{ url_for('cadastro_animais') }}">Cadastro de Animais</a></li>
+                <li><a href="{{ url_for('agendar_consultas') }}">Agendamento de Consultas</a></li>
+                <li><a href="{{ url_for('cadastro_veterinarios') }}">Cadastro de Veterinários</a></li>
+                <li><a href="{{ url_for('relatorios') }}">Relatórios</a></li>
+            </ul>
+            <ul>
+                <li><a href="{{ url_for('clientes') }}">Clientes</a></li>
+                <li><a href="{{ url_for('veterinarios') }}">Veterinários</a></li>
+                <li><a href="{{ url_for('animais') }}">Animais</a></li>
+                <li><a href="{{ url_for('consultas') }}">Consultas Agendadas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block conteudo %}
+        {% endblock conteudo %}
+    </main>
+
+</body>
+</html>

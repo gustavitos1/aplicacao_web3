@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+    <h2>Controle de Estoque</h2>
+    <form>
+        <input type="text" placeholder="Nome do Produto" required>
+        <input type="number" placeholder="Quantidade" required>
+        <input type="text" placeholder="Descrição" required>
+        <button type="submit">Adicionar ao Estoque</button>
+    </form>
+{% endblock conteudo %}

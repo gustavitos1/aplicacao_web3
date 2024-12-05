@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+    <div class="card">
+        <h2>Lista de Clientes</h2>
+        {% for item in lista_de_clientes %}
+            <div class="cliente-info">
+                <p><span>ID:</span> {{item.id_cliente}}</p>
+                <p><span>Nome:</span> {{item.Nome}}</p>
+                <p><span>CPF:</span> {{item.CPF}}</p>
+                <p><span>Telefone:</span> {{item.telefone}}</p>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock conteudo %}

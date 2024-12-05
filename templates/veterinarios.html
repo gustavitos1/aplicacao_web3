@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+    <div class="card">
+        <h2>Lista de Veterinários</h2>
+        {% for item in lista_de_veterinarios %}
+            <div class="veterinario-info">
+<!--                o span serve para classificar o texto inline de forma a estlizar no CSS-->
+                <p><span>ID:</span> {{item.id_veterinario}}</p>
+                <p><span>CRMV:</span> {{item.crmv}}</p>
+                <p><span>Nome:</span> {{item.nomeVet}}</p>
+                <p><span>Salário:</span> {{item.salario}}</p>
+                <a href="{{ url_for('editar_veterinario', id_veterinario=item.id_veterinario) }}" class="btn-edit">Editar</a>
+                <br>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock conteudo %}

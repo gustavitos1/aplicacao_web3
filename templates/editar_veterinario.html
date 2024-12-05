@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+    <h2>Editar Veterinário</h2>
+    <form action="{{ url_for('editar_veterinario', id_veterinario=veterinario.id_veterinario) }}" method="POST">
+        <div>
+            <label for="form_crmv">CRMV</label>
+            <input type="text" id="form_crmv" name="form_crmv" value="{{ veterinario.crmv }}" required>
+        </div>
+
+        <div>
+            <label for="form_nomeVet">Nome</label>
+            <input type="text" id="form_nomeVet" name="form_nomeVet" value="{{ veterinario.nomeVet }}" required>
+        </div>
+
+        <div>
+            <label for="form_salario">Salário</label>
+            <input type="text" id="form_salario" name="form_salario" value="{{ veterinario.salario }}" required>
+        </div>
+
+        <button type="submit">Salvar Alterações</button>
+    </form>
+{% endblock conteudo %}
